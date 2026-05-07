@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/sheet.css">
+</head>
+<body>
+<!--------------------- start navbar-------------------------------------------------------------- -->
+    <!-- <nav>
+        <div class="container-fluid">
+            <div class="button">
+              <a href="http://">
+                <img src="../images/doctors/1.png" alt="">
+              </a>
+            </div>
+            <div class="links">
+              <a href="/page/index.html">الرئيسيه</a>
+              <a href="/page/index.html#service">خدماتنا</a>
+            
+              <a href="/page/index.html#Booking">الحجز</a>
+            
+            </div>
+          <div class="logo">
+             <a href="http://">بريق</a>
+            <img src="/images/logo/1.png" alt="logo">
+          </div>
+        </div>
+      </nav> -->
+
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <div class="logo">
+            <a class="navbar-brand" href="#">بريق</a>
+          <img src="/images/logo/1.png" alt="logo">
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item">
+                <a class="nav-link  aria-current="page" href="/page/index.html">الرئيسيه</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/page/index.html#service">خدماتنا</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/page/index.html#Booking">الحجز</a>
+              </li>
+            
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+<!--------------------- end navbar-------------------------------------------------------------- -->
+
+<!--------------------- start patient account-------------------------------------------------------------- -->
+<!-- <section class="patient-section container-fluid">
+  <div class="patient">
+   <div class="image-patient">
+      <img src="../images/doctors/1.png" alt="">
+   </div>
+   <div class="patient-info">
+      <div class="information">
+          <h3>اسم المريض : </h3>
+          <h2>ناهد عمر </h2>
+      </div>
+      <div class="information">
+          <h3>رقم الموبيل :</h3>
+          <h2>01119170656</h2>
+      </div>
+      <div class="information">
+          <h3> الايميل :</h3>
+          <h2>nahed345@gmail.com</h2>
+      </div>
+      <div class="information">
+          <h3>الدكتور المتابع :</h3>
+          <h2>د.محمود المصري</h2>
+      </div>
+      <div class="information">
+          <h3>عدد الجلسات :</h3>
+          <h2>4 جلسات</h2>
+      </div>
+      <div class="information">
+        <h3> الجلسه القادمه :</h3>
+        <h2>11/4/2023</h2>
+    </div>
+      <div class="information">
+          <h3>سعر الجلسه :</h3>
+          <h2> 500 جنيه </h2>
+      </div>
+      <div class="information">
+          <h3> المبلغ المدفوع :</h3>
+          <h2> 1000 جنيه </h2>
+      </div>
+      <div class="information information-btn">
+          <h3> معاد الحجز :</h3>
+          <h2> السبت 3 مساء </h2>
+          <div>
+          <a href="#">تعديل</a>
+          <a href="#">حذف</a>
+      </div>
+      </div>
+
+
+   </div>
+  </div>
+</section> -->
+<div id="confirmation" class="patient-section container-fluid">
+  <h2>تأكيد الحجز</h2>
+  <div class="image-patient">
+    <img src="../images/doctors/1.png" alt="" id="patientImage">
+ </div>
+  <!-- <img id="patientImage" src="path_to_image" alt="صورة المريض" /> -->
+<div class="information">
+  <h3>الاسم: <span id="displayName"></span></h3>
+</div>
+<div class="information">
+  <h3>رقم الموبايل: <span id="displayPhone"></span></h3>
+</div>
+<div class="information">
+  <h3>البريد الإلكتروني: <span id="displayEmail"></span></h3>
+</div>
+  <div class="information">
+    <h3>معاد الحجز: <span id="displayAppointmentTime"></span></h3>
+  </div>
+  <div class="information">
+    <h3>الدكتور المتابع :</h3>
+    <h2>د.محمود المصري</h2>
+</div>
+<div class="information">
+    <h3>عدد الجلسات :</h3>
+    <h2>4 جلسات</h2>
+</div>
+<div class="information">
+  <h3> الجلسه القادمه :</h3>
+  <h2>11/4/2023</h2>
+</div>
+<div class="information">
+    <h3>سعر الجلسه :</h3>
+    <h2> 500 جنيه </h2>
+</div>
+<div class="information">
+    <h3> المبلغ المدفوع :</h3>
+    <h2> 1000 جنيه </h2>
+</div>
+</div>
+
+<script>
+// استرجاع البيانات من localStorage
+document.getElementById("displayName").textContent = localStorage.getItem("name");
+document.getElementById("displayPhone").textContent = localStorage.getItem("phone");
+document.getElementById("displayEmail").textContent = localStorage.getItem("email");
+document.getElementById("displayAppointmentTime").textContent = localStorage.getItem("appointmentTime");
+
+// تأكد من تحديد المسار الصحيح لصورة المريض
+document.getElementById("patientImage").src = "/images/doctors/1.png";
+</script>
+
+
+<!--------------------- end patient account-------------------------------------------------------------- -->
+
+      <script src="../js/bootstrap.bundle.min.js"></script>
+
+    
+</body>
+</html>

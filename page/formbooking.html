@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحجز</title>
+    <link rel="stylesheet" href="../css/bookingform.css">
+</head>
+
+<body>
+
+  <!-- ---------------------------------- start form booking--------------------------------------------------------- -->
+      <div class="container">
+          <h1>الحجـــــــــــــــز</h1>
+          <form id="booking-form">
+            <div class="form-group">
+                <label for="name">اسم المريض</label>
+                <input type="text" id="name" placeholder="ادخل اسم المريض" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">رقم الموبايل</label>
+                <input type="tel" id="phone" placeholder="ادخل رقم الموبايل" required>
+            </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" placeholder="ادخل البريد الالكتروني" required>
+            </div>
+            <div class="form-group">
+                <label for="appointmentTime">معاد الحجز</label>
+                <input type="datetime-local" id="appointmentTime" required>
+            </div>
+            <button type="submit" id="submit">احجز</button>
+          </form>
+      </div>
+          <script>
+
+
+          document.getElementById("booking-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            // تخزين البيانات في localStorage
+            localStorage.setItem("name", document.getElementById("name").value);
+            localStorage.setItem("phone", document.getElementById("phone").value);
+            localStorage.setItem("email", document.getElementById("email").value);
+            localStorage.setItem("appointmentTime", document.getElementById("appointmentTime").value);
+            
+            // الانتقال إلى الصفحة التالية
+            window.location.href = "/page/patientaccount.html";
+          });
+
+
+
+          document.getElementById('booking-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // الحصول على بيانات المريض
+    const patientName = document.getElementById('name').value;
+    const appointmentTime = document.getElementById('appointmentTime').value;
+    
+    // تخزين البيانات في localStorage
+    localStorage.setItem('patientName', patientName);
+    localStorage.setItem('appointmentTime', appointmentTime);
+    
+    // توجيه المستخدم إلى صفحة موظف الاستقبال بعد الحجز
+    window.location.href = 'receptionist.html';
+});
+          </script>
+  
+    <!-- ---------------------------------- end form booking--------------------------------------------------------- -->
+    <!-- <script src="/js/sript.js"></script> -->
+</body>
+
+</html>

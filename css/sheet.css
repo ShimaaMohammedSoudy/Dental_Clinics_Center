@@ -1,0 +1,931 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:slnt,wght@-2,200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Tajawal", sans-serif;
+}
+
+nav {
+    width: 100%;
+    font-family: "Tajawal", sans-serif;
+    background-color: white;
+    position: fixed;
+    z-index: 4444;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+}
+.navbar {
+direction: rtl;
+
+}
+.nav-item a{
+
+  color: rgba(66, 149, 197, 1);
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 700;
+  font-size: 24px;
+
+}
+
+nav .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+.button a {
+    text-decoration: none;
+    padding: 13px 16px;
+    gap: 12px;
+    color: white;
+    border-radius: 32px;
+    margin-left: 30px;
+    background: linear-gradient(265.39deg, rgba(16, 177, 200, 0.62) 20.72%, rgba(17, 157, 207, 0.7775) 41.5%, rgba(18, 137, 214, 0.94) 62.1%);
+    font-size: 20px;
+}
+
+.links a {
+    color: rgba(66, 149, 197, 1);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.nav-item a:hover {
+    border-bottom: 2px solid rgba(66, 149, 197, 1);
+}
+
+.logo a {
+    display: inline-block;
+    margin-left: -30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 35px;
+    background: linear-gradient(265.39deg, rgba(16, 177, 200, 0.62) 20.72%, rgba(17, 157, 207, 0.7775) 41.5%, rgba(18, 137, 214, 0.94) 62.1%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 35px;
+    margin-bottom: 15px;
+
+}
+
+nav img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 20px;
+}
+.logo {
+  display: flex;
+}
+
+
+/* OUR TEAM SECTION */
+.ourTeam-section {
+  background-size: cover;
+  background-position: center center;
+  background-image: url(/images/1.jfif);
+  opacity: 0.9;
+  padding: 20px 30px 0;
+  position: relative;
+  width: 100%;
+}
+
+.ourTeam-section h1 {
+  direction: rtl;
+  font-weight: 700;
+  color: #104c6e;
+  margin-top: 30px;
+}
+
+.our-team {
+  margin-top: 50px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cars-doctor {
+  align-items: center;
+  margin: auto;
+  width: 30%;
+  background-color: white;
+  margin: 5px;
+  padding: 20px;
+  color: #134461;
+  box-shadow: #4295C5;
+  border-radius: 10%;
+}
+
+.cars-doctor img {
+  border-radius: 50%;
+  width: 108px;
+  height: 108px;
+}
+
+.cars-doctor .booking {
+  text-decoration: none;
+  background: linear-gradient(#4295C5, #42c5a7);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: ease 0.7s;
+}
+
+.cars-doctor .more {
+  display: inline-block;
+  font-size: 20px;
+  color: red;
+  font-family: "Tajawal", sans-serif;
+  text-decoration: none;
+  padding: 10px 0;
+  border-radius: 20px;
+}
+
+.cars-doctor .more:hover {
+  background-color: red;
+  color: white;
+  /* width: 100%; */
+}
+
+.info-doc i {
+  color: gold;
+}
+
+.info-doc {
+  opacity: 0;
+  transition: ease;
+}
+
+.cars-doctor:hover {
+  width: 32%;
+  transition: 0.3s;
+}
+
+.cars-doctor:hover .info-doc {
+  opacity: 1;
+  transition: ease 0.3s;
+  
+}
+
+.cars-doctor a:hover {
+  font-size: 22px;
+  background: red;
+}
+
+
+
+
+/* PATIENT SECTION */
+.patient-section {
+    direction: rtl;
+    background: linear-gradient(265.39deg, rgba(16, 177, 200, 0.62) 20.72%, rgba(17, 157, 207, 0.7775) 41.5%, rgba(18, 137, 214, 0.94) 62.1%);
+    padding: 50px;
+    background-size: 100%;
+}
+
+.patient {
+    padding: 50px;
+    margin: auto;
+}
+
+.image-patient {
+    width: 50%;
+    margin:  0 auto;
+    margin-top: 30px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+}
+
+.image-patient img {
+    border-radius: 50%;
+    width: 50%;
+    
+    
+}
+.patient label{
+  display: block;
+  background-color: white;
+  width: 40%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: red;
+   cursor: pointer
+}
+ .patient .input{
+  display: none;
+
+ }
+.patient-info {
+    color: #134461;
+    margin: auto;
+}
+ .information {
+  background-color: #ffffff;
+  padding-right: 20px;
+  border-radius: 15px;
+width: 40%;
+  padding: 10px;
+  margin: 20px auto;
+  display: flex;
+}
+.information span{
+  color: #134461;
+}
+ h3 {
+  color: red;
+}
+
+.information-btn {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.information-btn a {
+  text-decoration: none;
+  background: linear-gradient(#4295C5, #42c5a7);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.patient-info .email{
+  font-size: 25px;
+  max-width:  700px;
+  color: #134461;
+}
+
+/* TESTIMONIALS SECTION */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.doctor-profile {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-info {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.doctor-info h2 {
+  color: #3366cc;
+  margin-bottom: 10px;
+}
+
+.doctor-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.doctor-rating {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #FFA500;
+  margin-bottom: 15px;
+}
+
+.doctor-image {
+  flex: 0 0 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.doctor-image img {
+  width: 100%;
+  height: auto;
+}
+
+.service-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.service-images img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials {
+  margin-top: 40px;
+}
+
+.testimonials h3 {
+  color: #3366cc;
+  margin-bottom: 20px;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonial-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.testimonial-card h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.testimonial-card .stars {
+  color: #FFA500;
+  margin-top: 10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .doctor-profile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .doctor-info {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .doctor-image {
+      flex: 0 0 auto;
+      width: 150px;
+  }
+
+  .doctor-image img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-images {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .service-images img {
+      margin: 5px;
+      width: 80px;
+      height: 80px;
+  }
+
+  .testimonial-cards {
+      grid-template-columns: 1fr;
+  }
+}
+
+
+/* COMMENT SECTION */
+.comment-section {
+  width: 60%;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #3366cc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  direction: rtl;
+}
+
+.comment-section h2 {
+  text-align: center;
+  color: red;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.comment-section button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  font-family: "Tajawal", sans-serif;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-section button:hover {
+  background-color: #218838;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+/* Continuation of COMMENT SECTION */
+.comment {
+display: flex;
+align-items: center;
+margin-bottom: 15px;
+padding: 10px;
+background-color: #f9f9f9;
+border-radius: 10px;
+}
+
+.comment img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 15px;
+}
+
+.comment-text h3 {
+margin: 0;
+color: #333;
+}
+
+.comment-text p {
+margin: 5px 0 0;
+color: #555;
+}
+
+/* Media Queries for Responsiveness */
+
+
+@media (max-width: 1200px) {
+.container {
+    padding: 50px;
+}
+
+.patient-section {
+    padding: 40px;
+}
+
+.our-team {
+    flex-direction: column;
+}
+
+.cars-doctor {
+    width: 45%;
+}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) {
+.nav .container-fluid {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo a {
+    font-size: 28px;
+}
+
+.links a {
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.button a {
+    font-size: 18px;
+    padding: 10px 16px;
+}
+
+.cars-doctor {
+    width: 100%;
+}
+
+.patient-section {
+    padding: 30px;
+}
+
+.patient-info .information {
+    width: 60%;
+}
+
+.comment-section {
+    width: 80%;
+}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+nav .container-fluid {
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+}
+
+.links a, 
+.button a {
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+nav img {
+    width: 80px;
+    height: 80px;
+}
+
+.ourTeam-section h1 {
+    font-size: 24px;
+}
+
+.cars-doctor {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.patient-info .information {
+    width: 80%;
+}
+
+.comment-section {
+    width: 90%;
+}
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+.logo a {
+    font-size: 20px;
+}
+
+.links a, 
+.button a {
+    font-size: 14px;
+}
+
+nav img {
+    width: 60px;
+    height: 60px;
+}
+.patient-info .information {
+  background-color: #ffffff;
+  padding-right: 20px;
+  border-radius: 15px;
+  width: 40%;
+  margin: 20px auto;
+  display: flex;
+}
+
+.patient-info h3 {
+  color: red;
+}
+
+.information-btn {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.information-btn a {
+  text-decoration: none;
+  background: linear-gradient(#4295C5, #42c5a7);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials {
+  margin-top: 40px;
+}
+
+.testimonials h3 {
+  color: #3366cc;
+  margin-bottom: 20px;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonial-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.testimonial-card h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.testimonial-card .stars {
+  color: #FFA500;
+  margin-top: 10px;
+}
+
+
+
+/* COMMENT SECTION */
+.comment-section {
+  width: 60%;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #3366cc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  direction: rtl;
+}
+
+.comment-section h2 {
+  text-align: center;
+  color: red;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.comment-section button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  font-family: "Tajawal", sans-serif;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-section button:hover {
+  background-color: #218838;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+/* Continuation of COMMENT SECTION */
+.comment {
+display: flex;
+align-items: center;
+margin-bottom: 15px;
+padding: 10px;
+background-color: #f9f9f9;
+border-radius: 10px;
+}
+
+.comment img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 15px;
+}
+
+.comment-text h3 {
+margin: 0;
+color: #333;
+}
+
+.comment-text p {
+margin: 5px 0 0;
+color: #555;
+}
+
+/* Media Queries for Responsiveness */
+
+}
+@media (max-width: 1200px) {
+.container {
+    padding: 50px;
+}
+
+.patient-section {
+    padding: 40px;
+}
+
+.our-team {
+    flex-direction: column;
+}
+
+.cars-doctor {
+    width: 45%;
+}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) {
+  .cars-doctor:hover{
+    width: 100%;
+  }
+.nav .container-fluid {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo a {
+    font-size: 28px;
+}
+
+.links a {
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.button a {
+    font-size: 18px;
+    padding: 10px 16px;
+}
+
+.cars-doctor {
+    width: 100%;
+}
+
+.patient-section {
+    padding: 30px;
+}
+
+.information {
+    width: 60%;
+}
+
+.comment-section {
+    width: 80%;
+}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 768px) {
+  /* body{
+    background-color: #218838;
+  } */
+nav .container-fluid {
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+}
+
+.links a, 
+.button a {
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* nav img {
+    width: 80px;
+    height: 80px;
+} */
+
+.ourTeam-section h1 {
+    font-size: 24px;
+}
+
+.cars-doctor {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+ .information {
+    width: 80%;
+}
+
+.comment-section {
+    width: 90%;
+}
+
+}
+.doctor-profile{
+  direction: rtl;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 600px){
+.information {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 10px;
+    
+    }
+.logo a {
+    font-size: 20px;
+}
+
+
+.links a, 
+.button a {
+    font-size: 14px;
+}
+/* 
+nav img {
+    width: 60px;
+    height: 60px;
+} */
+body{
+  background-color: #134461;
+}
+.patient-info .email{
+  font-size: 17px;
+  max-width:  700px;
+  color: #134461;
+}
+ .logo {
+  margin-bottom: 20px;
+ }
+ .logo a{
+  position: relative;
+  top: 28px;
+  left: 10px;
+ }
+
+}

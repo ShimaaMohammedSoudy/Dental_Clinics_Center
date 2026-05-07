@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+
+    <link rel="stylesheet" href="/css/sheet.css">
+</head>
+<body>
+    
+    
+
+    <!-- <nav>
+        <div class="container-fluid">
+            <div class="button">
+              <a href="/page/createaccount.html">انشاء الحساب</a>
+              <a href="/page/signup.html">تسجيل الدخول</a>
+            </div>
+            <div class="links">
+              <a href="/page/index.html">الرئيسيه</a>
+              <a href="/page/index.html#service">خدماتنا</a>
+              <a href="/page//index.html#Booking">الحجز</a>
+              <a href="/page/index.html#contact">تواصل معنا</a>
+            </div>
+          <div class="logo">
+             <a href="http://">بريق</a>
+            <img src="/images/logo/1.png" alt="logo">
+          </div>
+        </div>
+      </nav> -->
+
+      <div class="container">
+        <!-- Doctor Profile -->
+        <div class="doctor-profile">
+            <div class="doctor-info">
+                <div class="doctor-rating">★ 4.8</div>
+                <h2>د. فاطمة حسن</h2>
+                <p>التخصص: طب أسنان الأطفال</p>
+                <p>أيام العمل: الاثنين - الأربعاء</p>
+                <p>الخبرة: 6 سنوات</p>
+            </div>
+            <div class="doctor-image">
+                <img src="../images/doc/2.png" alt="د. فاطمة حسن">
+            </div>
+        </div>
+
+        <!-- Service Images -->
+        <div class="service-images">
+            <img src="../images/2.jfif" alt="Image1">
+            <img src="../images/3.jfif" alt="Image2">
+            <img src="../images/4.jfif" alt="Image3">
+            <img src="../images/6.jfif" alt="Image4">
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials">
+            <h3>آراء العملاء</h3>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <img src="../images/clintesView/1.jfif" alt="User1">
+                    <h4>أحمد محمد</h4>
+                    <p>خدمة رائعة وأطباء محترفين.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="../images/clintesView/2.jfif" alt="User2">
+                    <h4>مروة محمد</h4>
+                    <p>تجربة ممتازة، أوصي بها بشدة.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="../images/clintesView/3.jfif" alt="User3">
+                    <h4>علي أحمد</h4>
+                    <p>خدمات عالية الجودة.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="comment-section">
+      <h2>أضف تعليقك</h2>
+      <textarea placeholder="أدخل تعليقك هنا..." id="commentInput"></textarea>
+      <button>إرسال</button>
+
+      <div class="comments">
+          <div class="comment">
+              <img src="/images/doctors/1.png" alt="User Image">
+              <div class="comment-text">
+                  <h3> نهال احمد</h3>
+                  <p>  من احسن دكاتره اللي اتعاملت معاها</p>
+              </div>
+          </div>
+          <div class="comment">
+              <img src="/images/doctors/2.png" alt="User Image">
+              <div class="comment-text">
+                  <h3>أحمد علي</h3>
+                  <p>    شكرا جدا ليكي يادكتور</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  <script>
+    // Load Profile Image
+    document.addEventListener('DOMContentLoaded', function () {
+        if (localStorage.getItem('doctorImage')) {
+            document.querySelector('.doctor-image img').src = localStorage.getItem('doctorImage');
+        }
+
+        // Load Case Images
+        if (localStorage.getItem('caseImages')) {
+            const imagesArray = JSON.parse(localStorage.getItem('caseImages'));
+            const serviceImagesDiv = document.querySelector('.service-images');
+            imagesArray.forEach(imageSrc => {
+                const imgElement = document.createElement('img');
+                imgElement.src = imageSrc;
+                imgElement.alt = "Case Image";
+                serviceImagesDiv.appendChild(imgElement);
+            });
+        }
+
+        // Load Doctor Information
+        if (localStorage.getItem('doctorName')) {
+            document.querySelector('.doctor-info h2').textContent = localStorage.getItem('doctorName');
+        }
+        if (localStorage.getItem('specialization')) {
+            document.querySelector('.doctor-info p:nth-child(3)').textContent = 'التخصص: ' + localStorage.getItem('specialization');
+        }
+        if (localStorage.getItem('workDays')) {
+            document.querySelector('.doctor-info p:nth-child(4)').textContent = 'أيام العمل: ' + localStorage.getItem('workDays');
+        }
+        if (localStorage.getItem('experience')) {
+            document.querySelector('.doctor-info p:nth-child(5)').textContent = 'الخبرة: ' + localStorage.getItem('experience');
+        }
+    });
+</script>
+
+</body>
+</html>

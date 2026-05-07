@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/sty5.css">
+  <style>
+    .service-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .service-images img {
+      max-width: calc(25% - 10px);
+      flex: 1 1 calc(25% - 10px);
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container-fluid">
+      <div class="logo">
+        <a href="/page/index.html">بريق</a>
+        <img src="../images/logo/1.png" alt="logo">
+      </div>
+      <div class="links">
+        <a href="/page/index.html">الرئيسيه</a>
+        <a href="/page/index.html#service">خدماتنا</a>
+        <a href="/page/profil-doctor.html">عرض تفاصيل</a>
+        <a href="/page/index.html#contact">تواصل معنا</a>
+      </div>
+      <a href="/page/doc.html" class="account">
+        <img id="profile-image-display" src="../images/doctors/photo_2024-08-15_23-53-55.jpg" alt="">
+      </a>
+    </div>
+  </nav>
+
+  <section class="hedh">
+    <div>
+      <h3 id="doctor-name-display">د.فاطمة حسن</h3>
+      <img id="profile-image-section" src="../images/doctors/photo_2024-08-15_23-53-55.jpg" alt="">
+    </div>
+    <div class="container">
+      <div class="people-watting">
+        <p>قائمه الانتظار</p>
+        <div class="btn">
+          <input type="checkbox">
+          <h4 class="name">ولاء احمد</h4>
+        </div>
+        <div class="btn">
+          <input type="checkbox">
+          <h4 class="name">نهال احمد</h4>
+        </div>
+        <div class="btn">
+          <input type="checkbox">
+          <h4 class="name">ندى محمد</h4>
+        </div>
+        <div class="btn">
+          <input type="checkbox">
+          <h4 class="name">يوسف احمد</h4>
+        </div>
+        <div class="btn">
+          <input type="checkbox">
+          <h4 class="name">عمر نادر</h4>
+        </div>
+      </div>
+      <div class="people-finshed mg">
+        <p>انهاء الكشف والجلسات</p>
+        <div class="btn">
+          <input type="checkbox" checked>
+          <h4 class="name">شيماء احمد</h4>
+        </div>
+        <div class="btn">
+          <input type="checkbox" checked>
+          <h4 class="name">رضوى محمد</h4>
+        </div>
+        <div class="btn">
+          <input type="checkbox" checked>
+          <h4 class="name">اسامه محمد</h4>
+        </div>
+        <div class="btn">
+          <input type="checkbox" checked>
+          <h4 class="name">محمود عمر</h4>
+        </div>
+        <div class="btn">
+          <input type="checkbox" checked>
+          <h4 class="name">يارا هانى</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const profileImage = localStorage.getItem('doctorImage');
+      if (profileImage) {
+        document.getElementById('profile-image-display').src = profileImage;
+        document.getElementById('profile-image-section').src = profileImage;
+      }
+      const doctorName = localStorage.getItem('doctorName');
+      if (doctorName) {
+        document.getElementById('doctor-name-display').textContent = doctorName;
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const patientName = localStorage.getItem('patientName');
+    
+    if (patientName) {
+        // إضافة اسم المريض لقائمة الانتظار
+        const patientEntry = `
+            <div class="btn">
+                <input type="checkbox">
+                <h4 class="name">${patientName}</h4>
+            </div>
+        `;
+        document.querySelector('.people-watting').insertAdjacentHTML('beforeend', patientEntry);
+        
+        // تنظيف الـlocalStorage بعد الاستخدام
+        localStorage.removeItem('patientName');
+    }
+});
+  </script>
+  <script src="../js/doctorpage.js"></script>
+</body>
+
+</html>

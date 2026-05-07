@@ -1,0 +1,180 @@
+<!-- Website: www.codingdung.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحديث بيانات طبيب</title>
+    <link rel="stylesheet" href="../css/doctor-update.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .btn-outline-primary {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-container" class="container light-style flex-grow-1 container-p-y">
+        <h4 id="page-title" class="font-weight-bold py-3 mb-4">تحديث بيانات الطبيب</h4>
+
+        <div id="main-card" class="card overflow-hidden">
+            <div id="main-row" class="row no-gutters row-bordered row-border-light">
+                <div id="nav-column" class="col-md-3 pt-0">
+                    <div id="nav-links" class="list-group list-group-flush account-settings-links">
+                        <a id="general-settings-link" class="list-group-item list-group-item-action active"
+                            data-toggle="list" href="#account-general">اعدادات عامة</a>
+                        <a id="info-settings-link" class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-info">معلوماتك</a>
+                        <a id="social-settings-link" class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-social-links">وسائل التواصل الاجتماعي</a>
+                    </div>
+                </div>
+
+                <div id="content-column" class="col-md-9">
+                    <div id="tab-content" class="tab-content">
+                        <!-- General Account Settings -->
+                        <div id="account-general" class="tab-pane fade active show">
+                            <div id="general-card-body" class="card-body media align-items-center">
+                                <img id="profile-image" src="../images/doctor-avatar.jpg" alt class="d-block ui-w-80">
+                                <div id="image-actions" class="media-body ml-4">
+                                    <label id="update-profile-label" class="btn btn-outline-primary">
+                                        تحديث صورة الملف الشخصي
+                                        <input id="update-profile-input" type="file" class="account-settings-fileinput">
+                                    </label>
+                                    <button id="delete-image-btn" type="button" class="btn btn-default md-btn-flat">حذف
+                                        الصورة</button>
+                                    <label id="upload-cases-label" class="btn btn-outline-primary">
+                                        رفع صور حالات
+                                        <input id="upload-cases-input" type="file" class="account-settings-fileinput">
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div id="general-form" class="card-body">
+                                <div class="form-group">
+                                    <label id="username-label" class="form-label">اسم المستخدم</label>
+                                    <input id="username-input" type="text" class="form-control mb-1" value="doctor"
+                                        disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label id="doctor-name-label" class="form-label">اسم الطبيب</label>
+                                    <input id="doctor-name-input" type="text" class="form-control" value="مصطفى الجندي">
+                                </div>
+                                <div class="form-group">
+                                    <label id="email-label" class="form-label">البريد الالكتروني</label>
+                                    <input id="email-input" type="text" class="form-control mb-1"
+                                        value="doctor@gmail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label id="specialization-label" class="form-label">التخصص</label>
+                                    <input id="specialization-input" type="text" class="form-control" value="أطفال"
+                                        disabled>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account Information -->
+                        <div id="account-info" class="tab-pane fade">
+                            <div id="info-card-body" class="card-body pb-2">
+                                <div class="form-group">
+                                    <label id="bio-label" class="form-label">نبذة</label>
+                                    <textarea id="bio-textarea" class="form-control"
+                                        rows="5">درس في جامعة المنيا، وحصل على الماجستر والدكتوراة من أسيوط.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label id="dob-label" class="form-label">تاريخ الميلاد</label>
+                                    <input id="dob-input" type="text" class="form-control" value="May 3, 1995">
+                                </div>
+                                <div class="form-group">
+                                    <label id="governorate-label" class="form-label">المحافظة</label>
+                                    <select id="governorate-select" class="custom-select">
+                                        <option>بني سويف</option>
+                                        <option selected>المنيا</option>
+                                        <option>اسيوط</option>
+                                        <option>الفيوم</option>
+                                        <option>غير ذلك</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div id="contact-info-card-body" class="card-body pb-2">
+                                <h6 id="contact-info-header" class="mb-4">التواصل</h6>
+                                <div class="form-group">
+                                    <label id="phone-label" class="form-label">الهاتف</label>
+                                    <input id="phone-input" type="text" class="form-control" value="01006547895">
+                                </div>
+                                <div class="form-group">
+                                    <label id="email-contact-label" class="form-label">البريد الالكتروني</label>
+                                    <input id="email-contact-input" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div id="account-social-links" class="tab-pane fade">
+                            <div id="social-links-card-body" class="card-body pb-2">
+                                <div class="form-group">
+                                    <label id="twitter-label" class="form-label">تويتر</label>
+                                    <input id="twitter-input" type="text" class="form-control"
+                                        value="https://twitter.com/doctor">
+                                </div>
+                                <div class="form-group">
+                                    <label id="facebook-label" class="form-label">فيسبوك</label>
+                                    <input id="facebook-input" type="text" class="form-control"
+                                        value="https://www.facebook.com/doctor">
+                                </div>
+                                <div class="form-group">
+                                    <label id="linkedin-label" class="form-label">لينكد ان</label>
+                                    <input id="linkedin-input" type="text" class="form-control"
+                                        value="https://www.linkedin.com/doctor">
+                                </div>
+                                <div class="form-group">
+                                    <label id="instagram-label" class="form-label">انستجرام</label>
+                                    <input id="instagram-input" type="text" class="form-control"
+                                        value="https://www.instagram.com/doctor">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="action-buttons" class="text-right mt-3">
+            <button id="save-btn" type="button" class="btn btn-primary">حفظ</button>
+            <button id="cancel-btn" type="button" class="btn btn-default btn-defaultt">إلغاء</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<style>
+    body {
+        color: #00A1E0;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #00A1E0;
+    }
+
+    .btn-defaultt {
+        color: white;
+        border-color: white;
+    }
+
+    .btn-defaultt:hover {
+        color: white;
+        background-color: red;
+    }
+</style>
+
+</html>

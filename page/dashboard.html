@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+  />
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <div class="stats">
+            <div class="stat-box">
+                <h3>إجمالي المرضى</h3>
+                <p>2550</p>
+            </div>
+            <div class="stat-box">
+                <h3>إجمالي المواعيد</h3>
+                <p>24550</p>
+            </div>
+            <div class="stat-box">
+                <h3>إجمالي الأرباح</h3>
+                <p>175800$</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="patient-list">
+                <h2>Admit Patient List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Assigned Doctor</th>
+                            <th>Date of Admit</th>
+                            <th>Diseases</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>احمد عمر </td>
+                            <td>د.محمودالمصرى</td>
+                            <td>23/05/2016</td>
+                            <td><span class="disease pneumonia">تلميع</span></td>
+                            <td><button class="edit-btn">✔️</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td> ساره عصام</td>
+                            <td>د.هانى </td>
+                            <td>03/06/2017</td>
+                            <td><span class="disease asthma">خلع</span></td>
+                            <td><button class="edit-btn">✔️</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>عبدالرحمن عمرو </td>
+                            <td>د.فاطمة حسن</td>
+                            <td>20/05/2016</td>
+                            <td><span class="disease allergy">خلع ضرس</span></td>
+                            <td><button class="edit-btn">✔️</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>اسراء ابراهيم</td>
+                            <td>د.محمد ممدوح</td>
+                            <td>20/04/2016</td>
+                            <td><span class="disease typhoid">حشو عصب</span></td>
+                            <td><button class="edit-btn">✔️</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>يارا خالد</td>
+                            <td>د. خالد علي</td>
+                            <td>16/06/2016</td>
+                            <td><span class="disease osteoporosis">تنظيف وتلميع</span></td>
+                            <td><button class="edit-btn">✔️</button></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>شيماء احمد</td>
+                            <td>د. خالد علي</td>
+                            <td>18/06/2016</td>
+                            <td><span class="disease cancer">تركيب تقويم</span></td>
+                            <td><button class="edit-btn">✔️</button></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td> أحمد على</td>
+                            <td>د. عماد نور</td>
+                            <td>17/05/2016</td>
+                            <td><span class="disease malaria">زراعه اسنان</span></td>
+                            <td><button class="edit-btn">✔️</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="doctor-list">
+                <h3>أفضل طبيب</h3>
+                <ul>
+                    <li>د. أحمد علي</li>
+                    <li>د. فاطمة حسن</li>
+                    <li>د. محمود المصري</li>
+                    <li>د. عماد نور</li>
+                    <li>د. خالد علي</li>
+                </ul>
+            </div>
+
+            <div class="charts">
+                <img src="/images/photo_2024-08-23_23-56-52.jpg" alt="Chart" class="chart-img">
+                <img src="/images/photo_2024-08-23_23-59-37.jpg" alt="Chart" class="chart-img">
+                <img src="/images/photo_2024-08-23_23-59-44.jpg" alt="Chart" class="chart-img">
+
+            </div>
+        </div>
+        <table class="table my-5 mx-5 text-center">
+            <thead>
+              <th>index</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>details</th>
+              <th>desiases</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </thead>
+      
+            <tbody id="tableBody">
+              <tr>
+                <td>0</td>
+                <td>عبدالله</td>
+                <td>4500</td>
+                <td>كشف كامل على الاسنان </td>
+                <td>حشواسنان</td>
+                <td>
+                  <button class="btn btn-outline-warning" onclick="Edit(0)" ;>
+                    update <i class="fas fa-pen"></i>
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-outline-danger" onclick="DeleteProduct(0);">
+                    delete<i class="fas fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    
+    <script src="/js/sript.js"></script>
+</body>
+</html>

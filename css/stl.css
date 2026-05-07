@@ -1,0 +1,294 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F8FB;
+    direction:rtl;
+}
+nav{
+  width: 100%;
+  font-family: "Tajawal", sans-serif;
+  background-color:white;
+  position: fixed;
+  z-index: 4444;
+}
+ nav .container-fluid{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.button a{
+text-decoration: none;
+padding: 13px 16px 13px 16px;
+gap: 12px;
+color: white;
+border-radius: 32px;
+margin-left: 30px;
+background: linear-gradient(265.39deg, rgba(16, 177, 200, 0.62) 20.72%, rgba(17, 157, 207, 0.7775) 41.5%, rgba(18, 137, 214, 0.94) 62.1%);
+font-size: 20px;
+width: 0;
+}
+
+.links a{
+  color: rgba(66, 149, 197, 1);
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.nav-item a{
+
+  color: rgba(66, 149, 197, 1);
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 700;
+  font-size: 24px;
+
+
+}
+.nav-item a:hover {
+  border-bottom: 2px solid rgba(66, 149, 197, 1);
+}
+
+.logo a {
+  display: inline-block;
+  margin-left: -30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 35px;
+  background: linear-gradient(265.39deg, rgba(16, 177, 200, 0.62) 20.72%, rgba(17, 157, 207, 0.7775) 41.5%, rgba(18, 137, 214, 0.94) 62.1%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  
+  margin-bottom: 15px;
+
+}
+
+nav img{
+  width:100px;
+  height: 100px;
+
+}
+
+
+.logo{
+  display: flex;
+}
+.logo a{
+  position: relative;
+  top: 20px;
+  left: -10px;
+}
+.container {
+    background-color: #fff;
+    padding: 30px;
+    width: 100%;
+    position: relative;
+    top: 70px;
+
+}
+.information{
+display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.log{
+    width: 45%;
+    position: relative;
+    top: -50px;
+
+}
+.log h2{
+  margin-top: 50px;
+}
+.brand{
+    top: 250px;
+    position: absolute;
+    right: 200px;
+    font-weight: bold;
+    color: #39bfd5;
+    font-size: 48px;
+}
+.info{
+width: 45%;
+}
+.info .colr{
+    color: rgba(16, 177, 200, 0.62) ;
+}
+.info h2{
+    font-weight: bold;
+    color:rgba(18, 137, 214, 0.94);
+    font-size: 40px;
+    top: 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+form span{
+    font-size: 20px;
+    color: dimgray;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+input[type="tel"]{
+  direction: rtl;
+}
+.btn {
+    padding:8px 10px;
+    background: linear-gradient(265.39deg, rgba(16, 177, 200, 0.62) 20.72%, rgba(17, 157, 207, 0.7775) 41.5%, rgba(18, 137, 214, 0.94) 62.1%);   
+     color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    margin:15px 15px;
+    width: 100%;
+    transition: background-color 0.3 ease;
+    max-width: 200px;
+text-align: center;
+text-decoration: none;
+}
+.btn:hover {
+    background-color: #17A3BA;
+}
+.submit{
+    color: #17A3BA;
+    text-decoration: none;
+}
+.role-selection {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.role-selection label {
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.role-selection input[type="radio"] {
+  margin-left: 10px;
+}
+.log{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.log h2{
+  display: inline-block;
+  position: relative;
+  bottom:200px;
+  background: linear-gradient(265.39deg, rgba(16, 177, 200, 0.62) 20.72%, rgba(17, 157, 207, 0.7775) 41.5%, rgba(18, 137, 214, 0.94) 62.1%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* جعل التصميم ريسبونسف */
+@media (max-width: 768px) {
+  .log h2{
+    display: inline-block;
+    position: relative;
+    bottom:150px;
+  }
+  .role-selection {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .role-selection label {
+      margin-bottom: 10px;
+  }
+
+  .btn {
+      width: 100%;
+  }
+}
+
+/* تحسين الأزرار */
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 768px) {
+  .information{
+    display: flex;
+    flex-direction: column;
+  }
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .info h2{
+        font-size: 22px; 
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    .log img {
+        width: 300px; 
+        margin-top: 70px;
+
+    }
+}
+@media (max-width: 480px) {
+  .log h2{
+    display: inline-block;
+    position: relative;
+    bottom:100px;
+  }
+    .container {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .log img {
+        width: 200px;
+        margin-top: 70px;
+    }
+}

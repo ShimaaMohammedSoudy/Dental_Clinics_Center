@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+  
+  
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/stl.css">
+
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="logo">
+        <a class="navbar-brand" href="#">بريق</a>
+      <img src="/images/logo/1.png" alt="logo">
+      </div>  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link  aria-current="page" href="/page/index.html">الرئيسيه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/page/index.html#service">خدماتنا</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/page/index.html#Booking">الحجز</a>
+          </li>
+        
+        </ul>
+        
+        
+      </div>
+    </div>
+  </nav>
+<!------------------------------------ start create account ---------------------------------------------------------------- -->
+   
+<div class="container">
+  <div class="information">
+      <div class="info">
+          <h2>إنشاء <span class="colro">حساب</span></h2>
+
+          <form id="createAccountForm" action="patientaccount.html" method="POST">
+              <label for="name"><span>الاسم</span></label>
+              <input type="text" id="name" name="name" placeholder="أدخل اسمك رباعي" required>
+              
+              <label for="name"><span>رقم الموبيل</span></label>
+              <input type="number" id="phone" name="phone" placeholder="ادخل رقم الموبيل" required>
+              
+              <label for="email"><span>البريد الالكترونى</span></label>
+              <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+              
+              <label for="password"><span>كلمه السر</span></label>
+              <input type="password" id="password" name="password" placeholder="أدخل كلمة السر" required>
+              
+              <button type="submit" class="btn">إنشاء حساب</button>
+          </form>
+
+          <p>لديك حساب بالفعل؟ <a href="signup.html" class="submit">سجل الدخول</a></p>
+      </div>
+      <div class="log">
+          <img src="../images/logo/1.png" alt="">
+          <h2>بريق</h2>
+      </div>
+  </div>
+</div>
+<script >
+  document.getElementById('createAccountForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Get input values
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Validation (you can add more validation rules as needed)
+    if (name === '' || phone === '' || email === '' || password === '') {
+        alert('Please fill all fields');
+        return;
+    }
+
+    // Create a user object
+    const user = {
+        name: name,
+        phone: phone,
+        email: email,
+        password: password
+    };
+
+    // Store the user object in local storage
+    localStorage.setItem('user', JSON.stringify(user));
+
+    // Redirect to login page
+    window.location.href = 'signup.html';
+});
+
+</script>
+<!------------------------------------ end create account ---------------------------------------------------------------- -->
+</body>
+</html>
